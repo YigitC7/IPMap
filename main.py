@@ -54,7 +54,6 @@ def start_mapping(active=False):
                 DATABASE.SaveNoIP(randomIP, f"Durum: {response.status_code}")
         
         except RequestException:
-            # Herhangi bir bağlantı hatasında burası calisir
             print(f"[-] BULUNAMADI: {randomIP}")
             DATABASE.SaveNoIP(randomIP, "Erisim Yok")
         except KeyboardInterrupt:
