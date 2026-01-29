@@ -43,7 +43,6 @@ def start_mapping(active=False):
         url = f"http://{randomIP}" 
         
         try:
-            # timeout süresini 1 saniye yaptık, hızlı geçmesi için
             response = requests.get(url, timeout=1, verify=False)
             
             if response.status_code == 200:
